@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohd Sheharyar — Gameplay Systems Developer</title>
+  <meta name="description" content="Gameplay Systems Developer specializing in Unreal Engine 5, VR Interaction Systems, and combat mechanics." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Cinzel (display) + Rajdhani (body) + Fira Code (code tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== GRAIN OVERLAY ========== -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-bracket">[</span>MS<span class="nav-logo-bracket">]</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#swordedge" class="nav-link">SwordEdge</a></li>
+      <li><a href="#vr-projects" class="nav-link">VR</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#timeline" class="nav-link">Journey</a></li>
+      <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========================================
+       SECTION 1 — HERO
+  ========================================= -->
+  <section class="hero" id="hero">
+    <!-- Animated particle canvas -->
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+    <!-- Background grid lines -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <!-- Scan line sweep -->
+    <div class="hero-scanline" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="hero-eyebrow-line"></span>
+        <span>Gameplay Systems Developer</span>
+        <span class="hero-eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-name reveal-up" style="--delay: 0.1s">
+        <span class="hero-name-first">Mohd</span>
+        <span class="hero-name-last glitch" data-text="Sheharyar">Sheharyar</span>
+      </h1>
+
+      <p class="hero-subtitle reveal-up" style="--delay: 0.25s">
+        Crafting interactive gameplay systems, combat mechanics,<br class="hero-br" />
+        and VR experiences using <span class="accent">Unreal Engine 5</span>
+      </p>
+
+      <!-- Status badge -->
+      <div class="hero-status reveal-up" style="--delay: 0.35s">
+        <span class="status-dot"></span>
+        <span>Currently: Android Game — Pre-Release</span>
+      </div>
+
+      <div class="hero-buttons reveal-up" style="--delay: 0.45s">
+        <!-- REPLACE href="#swordedge" with anchor, or keep internal link -->
+        <a href="#swordedge" class="btn btn--primary">
+          <span class="btn-icon">⚔</span>
+          Explore SwordEdge
+        </a>
+        <a href="#projects" class="btn btn--ghost">View Projects</a>
+        <!-- REPLACE href with your actual resume file path, e.g. "assets/resume.pdf" -->
+        <a href="assets/resume.pdf" class="btn btn--ghost" download>Download Resume</a>
+        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+      </div>
+
+      <!-- Tech strip -->
+      <div class="hero-tech reveal-up" style="--delay: 0.55s">
+        <span class="tech-tag">UE5</span>
+        <span class="tech-sep">·</span>
+        <span class="tech-tag">Blueprint</span>
+        <span class="tech-sep">·</span>
+        <span class="tech-tag">C++</span>
+        <span class="tech-sep">·</span>
+        <span class="tech-tag">VR / Meta Quest</span>
+        <span class="tech-sep">·</span>
+        <span class="tech-tag">Combat Systems</span>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 2 — SWORDEDGE FEATURED PROJECT
+  ========================================= -->
+  <section class="featured" id="swordedge">
+    <div class="section-label">
+      <span>// FEATURED PROJECT</span>
+    </div>
+
+    <div class="featured-header reveal-up">
+      <h2 class="featured-title">
+        <span class="featured-title-sub">Project 001</span>
+        SwordEdge
+      </h2>
+      <p class="featured-genre">Action Adventure RPG · Unreal Engine 5</p>
+    </div>
+
+    <!-- ── VIDEO EMBED ──
+         REPLACE the src in the iframe below with your actual YouTube embed URL.
+         Format: https://www.youtube.com/embed/YOUR_VIDEO_ID
+         Or for Vimeo: https://player.vimeo.com/video/YOUR_VIDEO_ID
+         Keep the "?rel=0&showinfo=0" params to hide distractions.
+    -->
+    <div class="featured-video reveal-up" style="--delay: 0.1s">
+      <div class="video-frame">
+        <div class="video-placeholder" id="swordedgeVideo">
+          <div class="video-placeholder-inner">
+            <div class="video-play-icon">▶</div>
+            <p>SwordEdge — Official Gameplay Trailer</p>
+            <span class="video-hint">Replace this block with your YouTube/Vimeo embed</span>
+            <!-- UNCOMMENT and replace src when ready:
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&showinfo=0"
+              title="SwordEdge Gameplay Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PILLARS ── -->
+    <div class="featured-pillars reveal-up" style="--delay: 0.2s">
+
+      <div class="pillar">
+        <div class="pillar-icon">⚔</div>
+        <h3 class="pillar-title">Combo-Based Combat</h3>
+        <p class="pillar-desc">
+          Fluid multi-hit combo chains with input buffering, hit-stop feedback,
+          and directional attack logic — built in Blueprint with C++ integration.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">✦</div>
+        <h3 class="pillar-title">Skill System</h3>
+        <p class="pillar-desc">
+          Modular ability framework supporting unlockable active and passive skills,
+          cooldown management, and real-time UI feedback loops.
+        </p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-icon">◈</div>
+        <h3 class="pillar-title">Cinematic Narrative</h3>
+        <p class="pillar-desc">
+          Character-driven storytelling woven into gameplay sequences using
+          Sequencer, dynamic dialogue triggers, and environmental storytelling.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ── SCREENSHOT GALLERY ──
+         REPLACE the src attributes with your actual screenshot paths.
+         Place screenshots in the "assets/swordedge/" folder.
+         Recommended filenames: ss-01.jpg, ss-02.jpg, ss-03.jpg, ss-04.jpg
+    -->
+    <div class="gallery reveal-up" style="--delay: 0.3s">
+      <div class="gallery-label">Screenshots</div>
+      <div class="gallery-grid" id="swordedgeGallery">
+        <div class="gallery-item">
+          <!-- REPLACE src: <img src="assets/swordedge/ss-01.jpg" alt="SwordEdge Combat Screenshot" loading="lazy" /> -->
+          <div class="gallery-placeholder">Combat System</div>
+        </div>
+        <div class="gallery-item gallery-item--tall">
+          <!-- REPLACE src: <img src="assets/swordedge/ss-02.jpg" alt="SwordEdge Skill Tree" loading="lazy" /> -->
+          <div class="gallery-placeholder">Skill Tree UI</div>
+        </div>
+        <div class="gallery-item">
+          <!-- REPLACE src: <img src="assets/swordedge/ss-03.jpg" alt="SwordEdge Environment" loading="lazy" /> -->
+          <div class="gallery-placeholder">Environment</div>
+        </div>
+        <div class="gallery-item gallery-item--wide">
+          <!-- REPLACE src: <img src="assets/swordedge/ss-04.jpg" alt="SwordEdge Cinematic" loading="lazy" /> -->
+          <div class="gallery-placeholder">Cinematic Sequence</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TECHNICAL BREAKDOWN (EXPANDABLE) ── -->
+    <div class="breakdown reveal-up" style="--delay: 0.35s">
+      <button class="breakdown-toggle" id="swordedgeBreakdown" aria-expanded="false">
+        <span>Technical Breakdown</span>
+        <span class="breakdown-arrow">+</span>
+      </button>
+      <div class="breakdown-content" id="swordedgeBreakdownContent">
+        <div class="breakdown-grid">
+          <div class="breakdown-item">
+            <h4 class="breakdown-item-title"><span class="code-tag">Combat System</span></h4>
+            <ul class="breakdown-list">
+              <li>Input buffering with frame-window detection</li>
+              <li>Combo state machine using UE5 Gameplay Tags</li>
+              <li>Hit detection via multi-trace collision sweeps</li>
+              <li>Hit-stop & camera shake on impact events</li>
+              <li>Enemy stagger and interrupt logic</li>
+            </ul>
+          </div>
+          <div class="breakdown-item">
+            <h4 class="breakdown-item-title"><span class="code-tag">Skill System</span></h4>
+            <ul class="breakdown-list">
+              <li>Data-driven skill definitions via DataAssets</li>
+              <li>Cooldown component reusable across actors</li>
+              <li>Blueprint interface for ability activation</li>
+              <li>Passive buff stack tracking</li>
+              <li>Dynamic HUD binding via UMG</li>
+            </ul>
+          </div>
+          <div class="breakdown-item">
+            <h4 class="breakdown-item-title"><span class="code-tag">Narrative System</span></h4>
+            <ul class="breakdown-list">
+              <li>Sequencer-driven cinematic cutscenes</li>
+              <li>Dialogue trigger volumes with conditions</li>
+              <li>Character state persistence across levels</li>
+              <li>Environmental storytelling with interactables</li>
+            </ul>
+          </div>
+          <div class="breakdown-item">
+            <h4 class="breakdown-item-title"><span class="code-tag">Tech Stack</span></h4>
+            <ul class="breakdown-list">
+              <li>Unreal Engine 5 (Lumen, Nanite)</li>
+              <li>Blueprint Visual Scripting (primary)</li>
+              <li>C++ (core systems, extensions)</li>
+              <li>Enhanced Input System</li>
+              <li>UMG + Common UI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="breakdown-status">
+          <span class="status-badge">🔁 Future Expansion Planned</span>
+          <span class="status-badge">⚔ Combat Depth Pass</span>
+          <span class="status-badge">🗺 Open World Extension</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 3 — VR PROJECTS
+  ========================================= -->
+  <section class="projects-section" id="vr-projects">
+    <div class="section-label">
+      <span>// VR INTERACTION SYSTEMS</span>
+    </div>
+
+    <div class="section-header reveal-up">
+      <h2 class="section-title">VR Projects</h2>
+      <p class="section-sub">Pushing the boundary of spatial interaction on Meta Quest</p>
+    </div>
+
+    <div class="cards-grid reveal-up" style="--delay: 0.1s">
+
+      <!-- ── VR Card 1: Clothing Try-On ── -->
+      <div class="project-card project-card--vr">
+        <div class="card-media">
+          <!-- VIDEO PLACEHOLDER: Replace with actual video embed or image
+               Recommended: Short looping mp4 preview, or YouTube embed.
+               Place video in assets/vr/clothing-preview.mp4
+          -->
+          <div class="card-media-placeholder">
+            <span>VR Try-On Preview</span>
+            <!-- REPLACE with: <video src="assets/vr/clothing-preview.mp4" autoplay muted loop playsinline></video> -->
+          </div>
+          <div class="card-platform-badge">Meta Quest</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">VR Clothing Try-On Simulation</h3>
+          <p class="card-desc">
+            Real-time virtual fitting room for Meta Quest. Users physically grab
+            and layer garments using tracked hand controllers with cloth simulation feedback.
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">VR</span>
+            <span class="tag">Meta Quest</span>
+            <span class="tag">Cloth Sim</span>
+            <span class="tag">XR Interaction</span>
+          </div>
+          <button class="card-expand-btn" aria-expanded="false" data-target="vr-card-1-detail">
+            Technical Details <span class="card-expand-arrow">+</span>
+          </button>
+          <div class="card-detail" id="vr-card-1-detail">
+            <ul class="detail-list">
+              <li>Physics-based garment draping using UE5 cloth solver</li>
+              <li>Hand tracking + controller hybrid interaction model</li>
+              <li>Attachment socket system for layered clothing</li>
+              <li>Mirror actor with real-time reflection for user feedback</li>
+              <li>Optimized for Quest standalone (draw call budgeting)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── VR Card 2: Keyboard Prediction ── -->
+      <div class="project-card project-card--vr">
+        <div class="card-media">
+          <div class="card-media-placeholder">
+            <span>VR Keyboard Preview</span>
+            <!-- REPLACE with video or image preview -->
+          </div>
+          <div class="card-platform-badge">Meta Quest</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">VR Keyboard Interaction System</h3>
+          <p class="card-desc">
+            World-space virtual keyboard with predictive text and autocorrect logic,
+            built for immersive text entry without breaking presence.
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">VR</span>
+            <span class="tag">UI Systems</span>
+            <span class="tag">NLP Logic</span>
+            <span class="tag">Blueprint</span>
+          </div>
+          <button class="card-expand-btn" aria-expanded="false" data-target="vr-card-2-detail">
+            Technical Details <span class="card-expand-arrow">+</span>
+          </button>
+          <div class="card-detail" id="vr-card-2-detail">
+            <ul class="detail-list">
+              <li>3D world-space UMG keyboard layout</li>
+              <li>Proximity-based key press detection via ray cast</li>
+              <li>Trie-based word prediction dictionary lookup</li>
+              <li>Haptic feedback on key interactions</li>
+              <li>Backspace & word-level correction logic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── VR Card 3: World-Space UI ── -->
+      <div class="project-card project-card--vr">
+        <div class="card-media">
+          <div class="card-media-placeholder">
+            <span>World-Space UI Preview</span>
+            <!-- REPLACE with video or image preview -->
+          </div>
+          <div class="card-platform-badge">UE5 · VR</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">World-Space UI Interaction System</h3>
+          <p class="card-desc">
+            Experimental system for interacting with floating 3D UI panels
+            using gaze, pointer, and direct touch input in VR environments.
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">UMG</span>
+            <span class="tag">VR</span>
+            <span class="tag">Widget Interaction</span>
+            <span class="tag">C++</span>
+          </div>
+          <button class="card-expand-btn" aria-expanded="false" data-target="vr-card-3-detail">
+            Technical Details <span class="card-expand-arrow">+</span>
+          </button>
+          <div class="card-detail" id="vr-card-3-detail">
+            <ul class="detail-list">
+              <li>WidgetInteractionComponent with custom trace channels</li>
+              <li>Gaze dwell-time fallback for controller-free interaction</li>
+              <li>Panel anchoring and billboarding to player view</li>
+              <li>Depth-sorted layering for overlapping panels</li>
+              <li>Modular panel prefab system for easy extension</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 4 — ADDITIONAL PROJECTS
+  ========================================= -->
+  <section class="projects-section projects-section--alt" id="projects">
+    <div class="section-label">
+      <span>// GAME PROJECTS</span>
+    </div>
+
+    <div class="section-header reveal-up">
+      <h2 class="section-title">Other Projects</h2>
+      <p class="section-sub">Spanning puzzle design, mobile, and cinematic storytelling</p>
+    </div>
+
+    <div class="cards-grid cards-grid--4 reveal-up" style="--delay: 0.1s">
+
+      <!-- ── Project: Key to Escape ── -->
+      <div class="project-card">
+        <div class="card-media">
+          <!-- REPLACE with actual screenshot:
+               <img src="assets/projects/key-to-escape.jpg" alt="Key to Escape Screenshot" loading="lazy" />
+          -->
+          <div class="card-media-placeholder">
+            <span>Key to Escape</span>
+          </div>
+          <div class="card-platform-badge">PC · UE5</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Key to Escape</h3>
+          <p class="card-desc">
+            First-person maze puzzle game with progressive difficulty, procedural
+            trap placement, and time-pressure mechanics.
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">Puzzle</span>
+            <span class="tag">Blueprint</span>
+          </div>
+          <button class="card-expand-btn" aria-expanded="false" data-target="proj-card-1-detail">
+            Details <span class="card-expand-arrow">+</span>
+          </button>
+          <div class="card-detail" id="proj-card-1-detail">
+            <ul class="detail-list">
+              <li>Procedural key spawn system across maze nodes</li>
+              <li>Countdown timer with escalating ambient audio</li>
+              <li>Blueprint-driven door unlock sequences</li>
+              <li>Restart and checkpoint save system</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Project: Android Game ── -->
+      <div class="project-card">
+        <div class="card-media">
+          <!-- REPLACE with screenshot: assets/projects/android-game.jpg -->
+          <div class="card-media-placeholder">
+            <span>Android Game</span>
+          </div>
+          <div class="card-platform-badge card-platform-badge--soon">Android · Soon</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Android Game <span class="badge-inline">Pre-Release</span></h3>
+          <p class="card-desc">
+            Mobile-native game in final pre-release polish. Optimized touch controls,
+            monetization hooks, and Google Play integration.
+          </p>
+          <div class="card-tags">
+            <span class="tag">Android</span>
+            <span class="tag">Mobile</span>
+            <span class="tag">Touch Input</span>
+          </div>
+          <button class="card-expand-btn" aria-expanded="false" data-target="proj-card-2-detail">
+            Details <span class="card-expand-arrow">+</span>
+          </button>
+          <div class="card-detail" id="proj-card-2-detail">
+            <ul class="detail-list">
+              <li>Fully touch-optimised control scheme</li>
+              <li>Performance-tuned for mid-range Android devices</li>
+              <li>Google Play Services integration</li>
+              <li>Release imminent — watch this space</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Project: Cinematic Storytelling ── -->
+      <div class="project-card">
+        <div class="card-media">
+          <!-- REPLACE with screenshot: assets/projects/cinematic.jpg -->
+          <div class="card-media-placeholder">
+            <span>Cinematic Project</span>
+          </div>
+          <div class="card-platform-badge">UE5 · Sequencer</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Unreal Cinematic Storytelling</h3>
+          <p class="card-desc">
+            A real-time cinematic experience exploring environmental narrative
+            design and character-driven storytelling inside UE5 Sequencer.
+          </p>
+          <div class="card-tags">
+            <span class="tag">UE5</span>
+            <span class="tag">Sequencer</span>
+            <span class="tag">Lumen</span>
+            <span class="tag">Narrative</span>
+          </div>
+          <button class="card-expand-btn" aria-expanded="false" data-target="proj-card-3-detail">
+            Details <span class="card-expand-arrow">+</span>
+          </button>
+          <div class="card-detail" id="proj-card-3-detail">
+            <ul class="detail-list">
+              <li>Full Sequencer timeline with camera cuts</li>
+              <li>Lumen GI for cinematic lighting quality</li>
+              <li>MetaHuman character integration</li>
+              <li>Environment art composition for mood storytelling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Placeholder: Coming Soon ── -->
+      <div class="project-card project-card--placeholder">
+        <div class="card-media">
+          <div class="card-media-placeholder card-media-placeholder--ghost">
+            <span class="coming-soon-icon">⬡</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title card-title--ghost">Next Project</h3>
+          <p class="card-desc card-desc--ghost">
+            Something new is being built. Check back soon.
+          </p>
+          <div class="card-tags">
+            <span class="tag tag--ghost">TBA</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 5 — TECHNICAL SKILLS
+  ========================================= -->
+  <section class="skills-section" id="skills">
+    <div class="section-label">
+      <span>// TECHNICAL ARSENAL</span>
+    </div>
+
+    <div class="section-header reveal-up">
+      <h2 class="section-title">Skills</h2>
+    </div>
+
+    <div class="skills-layout reveal-up" style="--delay: 0.1s">
+
+      <div class="skill-group">
+        <h3 class="skill-group-label">Core Engine</h3>
+        <div class="skill-tags">
+          <span class="skill-tag skill-tag--primary" style="--i:0">Unreal Engine 5</span>
+          <span class="skill-tag skill-tag--primary" style="--i:1">Blueprint Scripting</span>
+          <span class="skill-tag skill-tag--primary" style="--i:2">C++ (UE5 API)</span>
+          <span class="skill-tag skill-tag--primary" style="--i:3">Enhanced Input System</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-label">Gameplay Systems</h3>
+        <div class="skill-tags">
+          <span class="skill-tag skill-tag--combat" style="--i:0">Combat System Design</span>
+          <span class="skill-tag skill-tag--combat" style="--i:1">Gameplay Tags</span>
+          <span class="skill-tag skill-tag--combat" style="--i:2">Ability Systems</span>
+          <span class="skill-tag skill-tag--combat" style="--i:3">Game Prototyping</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-label">VR / XR</h3>
+        <div class="skill-tags">
+          <span class="skill-tag skill-tag--vr" style="--i:0">VR Interaction Systems</span>
+          <span class="skill-tag skill-tag--vr" style="--i:1">Meta Quest Development</span>
+          <span class="skill-tag skill-tag--vr" style="--i:2">XR Interaction Toolkit</span>
+          <span class="skill-tag skill-tag--vr" style="--i:3">World-Space UI</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-label">UI & Rendering</h3>
+        <div class="skill-tags">
+          <span class="skill-tag skill-tag--ui" style="--i:0">UMG / Common UI</span>
+          <span class="skill-tag skill-tag--ui" style="--i:1">Lumen GI</span>
+          <span class="skill-tag skill-tag--ui" style="--i:2">Nanite</span>
+          <span class="skill-tag skill-tag--ui" style="--i:3">UE5 Sequencer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 6 — DEVELOPMENT TIMELINE
+  ========================================= -->
+  <section class="timeline-section" id="timeline">
+    <div class="section-label">
+      <span>// DEVELOPMENT JOURNEY</span>
+    </div>
+
+    <div class="section-header reveal-up">
+      <h2 class="section-title">The Journey</h2>
+      <p class="section-sub">From first Blueprint node to shipping on Android</p>
+    </div>
+
+    <div class="timeline reveal-up" style="--delay: 0.1s">
+
+      <div class="timeline-item" data-phase="01">
+        <div class="timeline-node">
+          <span class="timeline-node-inner"></span>
+        </div>
+        <div class="timeline-content">
+          <button class="timeline-header" aria-expanded="false" data-target="tl-1">
+            <div>
+              <span class="timeline-phase">Phase 01</span>
+              <h3 class="timeline-title">Foundation</h3>
+              <p class="timeline-period">Early Learning · Game Engine Basics</p>
+            </div>
+            <span class="timeline-toggle">+</span>
+          </button>
+          <div class="timeline-detail" id="tl-1">
+            <p>
+              Dug into Unreal Engine fundamentals — level design, actor placement,
+              Blueprint basics, and understanding the UE5 project structure.
+              Built several small prototype levels to understand lighting, collision,
+              and basic player movement.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-phase="02">
+        <div class="timeline-node">
+          <span class="timeline-node-inner"></span>
+        </div>
+        <div class="timeline-content">
+          <button class="timeline-header" aria-expanded="false" data-target="tl-2">
+            <div>
+              <span class="timeline-phase">Phase 02</span>
+              <h3 class="timeline-title">Gameplay Systems Development</h3>
+              <p class="timeline-period">SwordEdge · Combat · Skill Systems</p>
+            </div>
+            <span class="timeline-toggle">+</span>
+          </button>
+          <div class="timeline-detail" id="tl-2">
+            <p>
+              Deep-dived into gameplay systems design. Built SwordEdge — an action
+              RPG featuring combo-based combat, a modular skill system, and
+              Sequencer-driven cinematic storytelling. First significant project to combine
+              gameplay engineering with narrative design.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-phase="03">
+        <div class="timeline-node">
+          <span class="timeline-node-inner"></span>
+        </div>
+        <div class="timeline-content">
+          <button class="timeline-header" aria-expanded="false" data-target="tl-3">
+            <div>
+              <span class="timeline-phase">Phase 03</span>
+              <h3 class="timeline-title">VR Specialization</h3>
+              <p class="timeline-period">Meta Quest · Spatial Interaction · World-Space UI</p>
+            </div>
+            <span class="timeline-toggle">+</span>
+          </button>
+          <div class="timeline-detail" id="tl-3">
+            <p>
+              Expanded into XR development on Meta Quest. Built three distinct VR systems:
+              a clothing try-on simulation, a predictive virtual keyboard, and a
+              world-space UI interaction framework. Each project pushed the boundary of
+              what natural spatial interaction can feel like inside a headset.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item timeline-item--current" data-phase="04">
+        <div class="timeline-node">
+          <span class="timeline-node-inner"></span>
+        </div>
+        <div class="timeline-content">
+          <button class="timeline-header" aria-expanded="false" data-target="tl-4">
+            <div>
+              <span class="timeline-phase">Phase 04</span>
+              <h3 class="timeline-title">Mobile & Release</h3>
+              <p class="timeline-period">Android · Pre-Release · Open to Opportunities</p>
+            </div>
+            <span class="timeline-toggle">+</span>
+          </button>
+          <div class="timeline-detail" id="tl-4">
+            <p>
+              Currently in the final stretch of an Android game release. Focused on
+              performance optimisation, touch input refinement, and Google Play integration.
+              Actively seeking roles as a Gameplay Systems Developer or Technical Designer
+              at game studios working in UE5 or XR.
+            </p>
+            <div class="timeline-cta">
+              <a href="#contact" class="btn btn--primary btn--sm">Let's Talk →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       SECTION 7 — CONTACT
+  ========================================= -->
+  <section class="contact-section" id="contact">
+    <div class="section-label">
+      <span>// CONTACT</span>
+    </div>
+
+    <div class="contact-inner reveal-up">
+      <h2 class="contact-title">
+        Open to<br /><span class="accent">New Roles</span>
+      </h2>
+      <p class="contact-sub">
+        Gameplay Systems Developer · Unreal Engine 5 · VR/XR<br />
+        Based in <strong>Bengaluru, India</strong> · Open to Remote
+      </p>
+
+      <div class="contact-links">
+        <!-- REPLACE href values with your actual links -->
+        <a href="mailto:your@email.com" class="contact-link">
+          <!-- REPLACE: your@email.com -->
+          <span class="contact-link-icon">✉</span>
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">your@email.com</span>
+        </a>
+
+        <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank" rel="noopener">
+          <!-- REPLACE: yourprofile with your LinkedIn username -->
+          <span class="contact-link-icon">in</span>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">linkedin.com/in/yourprofile</span>
+        </a>
+
+        <a href="https://github.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+          <!-- REPLACE: yourusername with your GitHub username -->
+          <span class="contact-link-icon">◈</span>
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">github.com/yourusername</span>
+        </a>
+      </div>
+
+      <!-- REPLACE href with actual resume file path -->
+      <a href="assets/resume.pdf" class="btn btn--primary btn--lg" download>
+        Download Resume
+      </a>
+    </div>
+
+    <div class="contact-bg-text" aria-hidden="true">HIRE</div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Mohd Sheharyar</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-role">Gameplay Systems Developer</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-location">Bengaluru, India</span>
+    </div>
+    <div class="footer-copy">
+      Built with HTML, CSS & JavaScript · No frameworks
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
