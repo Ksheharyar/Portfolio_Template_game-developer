@@ -22,7 +22,7 @@ The website highlights:
 - 📞 Contact Information
 - 🌐 Social & Portfolio Links
 
----
+---         
 
 # ✨ Features
 
