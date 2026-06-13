@@ -12,7 +12,7 @@ A modern and interactive portfolio template designed specifically for **Game Dev
 This portfolio template was created to help game developers present their work professionally to recruiters, studios, clients, and collaborators.
   
 The website highlights:
-
+  
 - 🎮 Featured Game Projects
 - 🕶️ VR / XR Experiences
 - 🛠️ Technical Skills
